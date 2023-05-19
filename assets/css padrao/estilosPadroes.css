@@ -1,0 +1,154 @@
+@font-face {
+    font-family: BDScript;
+    src: url(../fonts/BadScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: Regular;
+    src: url(../fonts/TT\ Norms\ Pro\ Regular.otf);
+}
+
+@font-face {
+    font-family: Medium;
+    src: url(../fonts/TT\ Norms\ Pro\ Medium.otf);
+}
+
+@font-face {
+    font-family: Bold;
+    src: url(../fonts/TT\ Norms\ Pro\ Bold.otf);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 20px;
+  }
+  
+body::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+    -webkit-border-radius: 20px;
+  }
+  
+body::-webkit-scrollbar-thumb:vertical {
+    height: 1px;
+    background-color: #ffa55196;
+    -webkit-border-radius: 3px;
+  }
+  
+body::-webkit-scrollbar-thumb:horizontal {
+    width: 1px;
+    background-color: #FFA451;
+    -webkit-border-radius: 3px;
+}
+
+
+body {
+    height: 100vh;
+    font-family: Regular, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.tela__inteira {
+    height: 100%;
+}
+
+
+button {
+    color: #ffffff;
+    font-family: Medium;
+    background: #FFA451;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    background: rgba(194, 189, 189, 0.7);
+    width: 100%;
+    padding-left: 15px;
+    font-family: Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+    color: #000000;
+}
+
+/* Acaba tags globais */
+
+.logo__adicao {
+    width: 24px;
+    height: 24px;
+    background: #FFF2E7;
+    border-radius: 50%;
+    background-image: url('../img/mais.svg');
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.cifrao::before {
+    color: #F08626;
+    content: '\0024';
+    margin-right: 4px;
+}
+
+.cifrao{
+    cursor: pointer;
+}
+
+.logo__subtracao {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background: #FFF2E7;
+    border-radius: 50%;
+    background-image: url('../img/menos.svg');
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+}
+
+.logo__coracao {
+    width: 24px;
+    height: 24px;
+    background: #FFF2E7;
+    border-radius: 50%;
+    background-image: url('../img/coracao.svg');
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.cursor-block {
+    cursor: not-allowed;
+}
+
+.colunm{
+    flex-direction: column;
+}

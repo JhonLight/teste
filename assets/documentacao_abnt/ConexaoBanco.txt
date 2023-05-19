@@ -1,0 +1,26 @@
+Set-ExecutionPolicy -ExecutionPolicy ByPass -Scope CurrentUser
+.\createmodel.ps1 SNCCHLAB02F29\TEW_SQLEXPRESS cadastro_armazem
+dotnet watch
+
+
+create database cadastro_armazem
+
+use cadastro_armazem
+
+
+create table Usuario(
+UsuarioId int identity primary key,
+UsuarioBairro varchar (50),
+UsuarioCep varchar (50),
+UsuarioCpf varchar (50),
+UsuarioEmail varchar (50),
+UsuarioEndereco varchar (50),
+UsuarioNumeroCasa varchar (50),
+UsuarioPrimeiroSome varchar (50),
+UsuarioRepetirSenha varchar (50),
+UsuarioSenha varchar (50),
+UsuarioTelefoneWhatsapp varchar (50),
+);
+
+select * from Usuario
+

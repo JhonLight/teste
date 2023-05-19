@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../assets/img/favicon.ico"
+    />
+    <title>Carrinho - Alimente se bem</title>
+    <link rel="stylesheet" href="../../assets/css padrao/reset.css" />
+    <link rel="stylesheet" href="../../assets/css padrao/estilosPadroes.css" />
+    <link rel="stylesheet" href="../orderListA6/orderListA6.css" />
+    <script src="../orderListA6/orderListA6.js"></script>
+  </head>
+  <body>
+    <header class="flex carrinho">
+      <div class="flex carrinho__gap">
+        <a href="../home5/home5.html" class="flex volta">Voltar</a>
+        <h1 class="cesta">Minha Cesta</h1>
+      </div>
+    </header>
+
+    <main class="grid carrinho__itens">
+      <div class="flex itens" data-carrinho>
+        <div class="flex prato__itens" >
+          <section data-img></section>
+          <div >
+            <p class="salada">Salada de fruta de quinoa</p>
+            <p class="prato__itens--texto">2 pacotes</p>
+            <p class="cifrao">20,000</p>
+          </div>
+        </div>
+        <div class="logo__subtracao"></div>
+        <div class="logo__adicao"></div>
+      </div>
+
+    </main>
+
+    <footer class="flex center carrinho__total">
+      <div>
+        <p class="total__texto">Total</p>
+        <p class="cifrao" data-total>60,000</p>
+      </div>
+      <button class="checkout" onclick="newDoc()">Confirmar</button>
+      <script>
+      function newDoc() {
+        window.location.assign("/src/complete7/complete7.html")
+      }
+      </script>
+    </footer>
+
+  </body>
+</html>

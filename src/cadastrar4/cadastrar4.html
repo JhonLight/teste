@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../assets/img/favicon.ico"
+    />
+    <title>Cadastro - Armazém saladas e frutas</title>
+    <link rel="stylesheet" href="../../assets/css padrao/reset.css" />
+    <link rel="stylesheet" href="../../assets/css padrao/estilosPadroes.css" />
+    <link rel="stylesheet" href="../cadastrar4/cadastrar4.css" />
+  </head>
+
+  <body class="form-container">
+    <form class="flex form" name="cadastro" >
+      <h1 class="titulo">Delivery <span class="Armazem"> Armazém</span></h1>
+
+      <div class="grid flex">
+        <div>
+          <label class="label" for="Nome"><strong>Primeiro nome</strong></label>
+          <input
+            class="input"
+            type="text"
+            id="PrimeiroNome"
+            placeholder="Cris"
+            maxlength="15"
+            oninput="nameValidate()"
+            required
+            name="primeiroNome"
+          />
+          <span class="span-required">Nome no mínimo 3 caracteres</span>
+        </div>
+
+        <div>
+          <label class="label" for="email"><strong>Email</strong></label>
+          <input
+            class="input"
+            type="email"
+            id="email"
+            placeholder="Digite seu email"
+            maxlength="50"
+            oninput="emailValidate()"
+            required
+            name="email"
+          />
+          <span class="span-required">Digite um email válido</span>
+        </div>
+
+        <div>
+          <label class="label" for="senha"><strong>Senha</strong></label>
+          <div class="nomes flex">
+            <input
+              class="input"
+              type="password"
+              id="senha"
+              data-senha
+              placeholder="digite sua senha"
+              maxlength="20"
+              oninput="mainPasswordValidate()"
+              required
+              name="senha"
+            />
+            <img class="img__eye" src="../../assets/img/eye.svg" alt="" />
+          </div>
+
+          <span class="span-required">Senha no minimo 8 caracteres</span>
+        </div>
+
+        <div>
+          <label class="label" for="repetir senha"
+            ><strong>Repetir senha</strong></label
+          >
+          <div class="nomes flex">
+            <input
+              class="input"
+              type="password"
+              id="repetirSenha"
+              data-senha-repetida
+              placeholder="repita sua senha"
+              maxlength="20"
+              oninput="comparePassword()"
+              
+              required
+              name="repetirSenha"
+            />
+            <img class="img__eyes" src="../../assets/img/eye.svg" alt="" />
+          </div>
+          <span class="span-required">Senhas devem ser compatíveis</span>
+        </div>
+
+        <div>
+          <label class="label" for="cpf"><strong>CPF</strong></label>
+          <input
+            class="input"
+            type="text"
+            id="cpf"
+            placeholder="informe seu cpf"
+            maxlength="14"
+            oninput="cpfValidate()"
+            onkeypress="return onlynumber()"
+            required
+            name="cpf"
+          />
+          <span class="span-required">cpf deve conter 11 números</span>
+        </div>
+
+        <div>
+          <label class="label" for="telefone"
+            ><strong>Telefone (Whatsapp)</strong></label
+          >
+          <input
+            class="input"
+            type="text"
+            id="telefone"
+            placeholder="digite um numero de telefone"
+            maxlength="15"
+            onkeyup="handlePhone(event)"
+            oninput="telefoneValidate()"
+            onkeypress="return onlynumber()"
+            required
+            name="telefoneWhats"
+          />
+          <span class="span-required">Telefone deve aceitar 11 números</span>
+        </div>
+
+        <div>
+          <label class="label" for="cep"><strong>CEP</strong></label>
+          <input
+            class="input"
+            type="text"
+            id="cep"
+            placeholder="digite um CEP"
+            maxlength="8"
+            onkeypress="onlynumber()"
+            required
+            name="cep"
+          />
+        </div>
+
+        <div>
+          <label class="label cursor-block" for="endereço"><strong>Endereço</strong></label>
+          <input
+            disabled
+            class="input cursor-block"
+            type="text"
+            id="endereco"
+            placeholder="Endereço"
+            required
+            name="endereco"
+            style="background-color: #ebe6e6;"
+          />
+        </div>
+
+        <div>
+          <label class="label" for="número"><strong>Número</strong></label>
+          <input
+            class="input"
+            type="number"
+            id="número"
+            placeholder="digite um número de endereço"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+           type = "number"
+           maxlength = "4"
+           required
+           name="numero"
+          />
+        </div>
+
+        <div>
+          <label class="label cursor-block" for="Bairro"><strong>Bairro</strong></label>
+          <input
+            disabled
+            class="input cursor-block"
+            type="text"
+            id="bairro"
+            placeholder="Bairro"
+            required
+            name="bairro"
+            style="background-color: #ebe6e6;"
+          />
+        </div>
+      </div>
+
+      
+
+      <button class="botao flex" id="send" type="submit">Cadastrar</button>
+    </form>
+
+   <script src="../cadastrar4/cadastro4-js/api-cep.js"></script>
+   <script src="../cadastrar4/cadastro4-js/cadastrar4.js"></script>
+   <script src="../cadastrar4/cadastro4-js/a-valida-vazio.js"></script>
+   <script src="../cadastrar4/cadastro4-js/guardavar.js" defer></script>
+   <script src="../cadastrar4/cadastro4-js/dados-cadastrais.js"></script>
+   <script src="../cadastrar4/cadastro4-js/rota-home.js"></script>
+  </body>
+</html>

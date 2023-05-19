@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../assets/img/favicon.ico"/>
+    <title>Login - Armazém saladas e frutas</title>
+    <link rel="stylesheet" href="../../assets/css padrao/reset.css" />
+    <link rel="stylesheet" href="../../assets/css padrao/estilosPadroes.css" />
+    <link rel="stylesheet" href="../authentic3/authentic3.css" />
+    <script src="../authentic3/authentic3-js/rota-home-login.js" defer></script>
+  </head>
+  <body>
+    <main class="tela__inteira">
+      <section class="tela__primaria flex">
+        <div class="flex tela__primaria--img">
+          <img src="../../assets/img/cesta2.svg" alt="cesta de frutas2" />
+          <img class="primaria__sombra"src="../../assets/img/sombracesta2.svg"alt="sombra da cesta de frutas 2">
+        </div>
+      </section>
+
+      <section class="tela__secundaria flex">
+        <form class="nome flex">
+          <label class="label" for="fnome">Email</label>
+          <input data-emailLogin class="input__email"type="text" id="email" name="emailLogin" placeholder="Digite seu email ou souVisitante@visitante.com" oninput="emailValidate()" required/>
+          <span class="span__email">Digite um email válido</span>
+         <label class="label" for="fnome">Senha</label>
+          <div class="nomes flex">
+            <input data-senhaLogin class="input__senha" type="password" id="senha" placeholder="Digite sua senha" oninput="senhaValidate()" required/>
+            <img class="imagem__olho" src="../../assets/img/eye.svg" alt="">
+          </div>
+          <span class="span__senha"> Digite uma senha com no mínimo 8 caracteres</span>
+          <div class="buttons">
+            <button data-btnLogin class="btn__pedido" type="submit">Iniciar pedido</button>
+            <a href="../cadastrar4/cadastrar4.html" class="btn__cadastro" >Cadastrar-se</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="../authentic3/authentic3-js/authentic3.js"></script>
+  </body>
+</html>
